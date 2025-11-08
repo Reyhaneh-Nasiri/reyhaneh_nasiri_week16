@@ -1,0 +1,26 @@
+.citySearch {
+  position: relative;
+  width: 250px;
+  margin: 20px auto;
+  font-size: 2rem;
+}
+
+.citySearch__input {
+  width: 100%;
+  font-size: inherit;
+  padding: 5px;
+  background-color: transparent;
+}
+
+.citySearch__hint {
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  font-size: inherit;
+  opacity: 0.3;
+  z-index: -1;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}

@@ -1,6 +1,10 @@
+import CityInput from "./components/CityInput"
+
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <CityInput />
+    </>
   )
 }
 
