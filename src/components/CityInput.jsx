@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Cities from "../data/cities.json";
 import styles from "./CityInput.module.css";
 const CityInput = () => {
   const [search, setSearch] = useState("");
@@ -12,7 +13,7 @@ const CityInput = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <p className={styles.citySearch__hint}>New York</p>
+        <p className={styles.citySearch__hint}>{search && Cities.find((city) => city.startsWith(search))}</p>
       </div>
     </>
   );
