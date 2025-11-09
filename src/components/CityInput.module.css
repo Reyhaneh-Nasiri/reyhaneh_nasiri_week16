@@ -15,10 +15,11 @@
     transform: translateY(.4rem);
     overflow: hidden;
     border-bottom: 2px solid #FDCEDF;
-    box-shadow: inset 2px 5px 15px #FDCEDF,inset 2px 2px 4px #161515;
+    box-shadow: inset 2px 5px 15px #FDCEDF, inset 2px 2px 4px #161515;
 }
 
-.citySearch__input,.citySearch__hint{
+.citySearch__input,
+.citySearch__hint {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +27,7 @@
 }
 
 .citySearch__input {
-    padding: 0 23px;
+    padding: 0 45px 0 23px;
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -36,15 +37,28 @@
     z-index: 2;
 }
 
-.citySearch__input::placeholder{
+.citySearch__input::placeholder {
     color: #FDCEDF;
 }
 
 .citySearch__hint {
-    padding: 0 23px;
+    padding: 0 50px 0 23px;
     font-size: inherit;
     opacity: 0.3;
     user-select: none;
     display: flex;
     align-items: center;
+}
+
+.citySearch__clearBtn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 0px #FDCEDF;
+    cursor: pointer;
+    z-index: 10;
 }
