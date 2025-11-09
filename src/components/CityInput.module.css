@@ -8,6 +8,14 @@
     border: 2px solid #FDCEDF;
     border-bottom: 7px solid #FDCEDF;
     border-radius: 50px;
+    transition: .3s;
+}
+
+.citySearch:focus-within {
+    transform: translateY(.4rem);
+    overflow: hidden;
+    border-bottom: 2px solid #FDCEDF;
+    box-shadow: inset 2px 5px 15px #FDCEDF,inset 2px 2px 4px #161515;
 }
 
 .citySearch__input,.citySearch__hint{
