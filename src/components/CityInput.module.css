@@ -35,6 +35,10 @@
     z-index: 2;
 }
 
+.citySearch__input::placeholder{
+    color: #FDCEDF;
+}
+
 .citySearch__hint {
     font-size: inherit;
     opacity: 0.3;
