@@ -18,7 +18,7 @@ const CityInput = () => {
           {search && Cities.find((city) => city.startsWith(search))}
         </p>
         {search && (
-          <button className={styles.citySearch__clearBtn}>&#10006;</button>
+          <button className={styles.citySearch__clearBtn} onClick={() => setSearch("")}>&#10006;</button>
         )}
       </div>
     </>
