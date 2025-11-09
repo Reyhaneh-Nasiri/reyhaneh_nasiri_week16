@@ -12,6 +12,7 @@ const CityInput = () => {
           className={styles.citySearch__input}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          placeholder="city"
         />
         <p className={styles.citySearch__hint}>{search && Cities.find((city) => city.startsWith(search))}</p>
       </div>
