@@ -1,21 +1,9 @@
 import Cities from "../data/cities.json";
-import { useReducer } from "react";
 import ClearSearchButton from "./ClearSearchButton";
 import Hint from "./Hint";
 import styles from "./CityInput.module.css";
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "UPDATE_SEARCH":
-      return action.payload;
-    case "CLEAR_SEARCH":
-      return "";
-    default:
-      throw new Error("Invalid Action");
-  }
-};
-const CityInput = () => {
-  const [search, dispatch] = useReducer(reducer, "");
+const CityInput = ({ search, dispatch }) => {
   return (
     <>
       <div className={styles.citySearch}>
