@@ -1,0 +1,12 @@
+.hint {
+    padding: 0 50px 0 23px;
+    font-size: inherit;
+    opacity: 0.3;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
