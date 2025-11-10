@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import Cities from "../data/cities.json";
 import styles from "./CityInput.module.css";
+import ClearSearchButton from "./ClearSearchButton";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -29,14 +30,7 @@ const CityInput = () => {
         <p className={styles.citySearch__hint}>
           {search && Cities.find((city) => city.startsWith(search))}
         </p>
-        {search && (
-          <button
-            className={styles.citySearch__clearBtn}
-            onClick={() => dispatch({ type: "CLEAR_SEARCH" })}
-          >
-            &#10006;
-          </button>
-        )}
+        {search && <ClearSearchButton dispatch={dispatch} />}
       </div>
     </>
   );
