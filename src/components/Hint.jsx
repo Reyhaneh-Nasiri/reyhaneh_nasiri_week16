@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { SearchContext } from "./context/SearchContext";
+
 import styles from "./Hint.module.css";
 
-const Hint = ({ cities, search }) => {
+const Hint = () => {
+  const { search, cities } = useContext(SearchContext);
   return (
     <p className={styles.hint}>
       {cities.find((city) => city.startsWith(search))}

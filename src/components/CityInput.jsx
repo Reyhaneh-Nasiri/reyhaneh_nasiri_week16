@@ -1,9 +1,12 @@
-import Cities from "../data/cities.json";
 import ClearSearchButton from "./ClearSearchButton";
 import Hint from "./Hint";
+import { useContext } from "react";
+import { SearchContext } from "./context/SearchContext";
+
 import styles from "./CityInput.module.css";
 
-const CityInput = ({ search, dispatch }) => {
+const CityInput = () => {
+  const { search, dispatch } = useContext(SearchContext);
   return (
     <>
       <div className={styles.citySearch}>
@@ -16,8 +19,8 @@ const CityInput = ({ search, dispatch }) => {
           }
           placeholder="city"
         />
-        {search && <Hint cities={Cities} search={search} />}
-        {search && <ClearSearchButton dispatch={dispatch} />}
+        {search && <Hint />}
+        {search && <ClearSearchButton />}
       </div>
     </>
   );

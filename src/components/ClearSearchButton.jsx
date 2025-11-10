@@ -1,6 +1,11 @@
-import styles from "./ClearSearchButton.module.css";
+import { useContext } from "react";
 
-const ClearSearchButton = ({ dispatch }) => {
+import styles from "./ClearSearchButton.module.css";
+import { SearchContext } from "./context/SearchContext";
+
+const ClearSearchButton = () => {
+  const { dispatch } = useContext(SearchContext);
+
   return (
     <button
       className={styles.clearBtn}
