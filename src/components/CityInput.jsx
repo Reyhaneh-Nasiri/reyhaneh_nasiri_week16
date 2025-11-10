@@ -1,7 +1,8 @@
-import { useReducer } from "react";
 import Cities from "../data/cities.json";
-import styles from "./CityInput.module.css";
+import { useReducer } from "react";
 import ClearSearchButton from "./ClearSearchButton";
+import Hint from "./Hint";
+import styles from "./CityInput.module.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -27,9 +28,7 @@ const CityInput = () => {
           }
           placeholder="city"
         />
-        <p className={styles.citySearch__hint}>
-          {search && Cities.find((city) => city.startsWith(search))}
-        </p>
+        {search && <Hint cities={Cities} search={search} />}
         {search && <ClearSearchButton dispatch={dispatch} />}
       </div>
     </>

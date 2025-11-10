@@ -18,8 +18,7 @@
     box-shadow: inset 2px 5px 15px #FDCEDF, inset 2px 2px 4px #161515;
 }
 
-.citySearch__input,
-.citySearch__hint {
+.citySearch__input {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,13 +38,4 @@
 
 .citySearch__input::placeholder {
     color: #FDCEDF;
-}
-
-.citySearch__hint {
-    padding: 0 50px 0 23px;
-    font-size: inherit;
-    opacity: 0.3;
-    user-select: none;
-    display: flex;
-    align-items: center;
 }
